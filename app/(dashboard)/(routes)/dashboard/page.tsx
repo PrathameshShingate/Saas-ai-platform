@@ -1,5 +1,9 @@
 const DashboardPage = () => {
-  return <h2 className="text-2xl">Dashboard page</h2>;
+  return (
+    <div>
+      <h2 className="text-2xl">Dashboard page</h2>
+    </div>
+  );
 };
 
 export default DashboardPage;
