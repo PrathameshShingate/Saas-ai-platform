@@ -24,7 +24,7 @@ import { Badge } from "@/components/ui/badge";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-export const tools = [
+const tools = [
   {
     label: "Conversation",
     icon: MessageSquare,
