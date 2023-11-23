@@ -7,15 +7,60 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Check, Zap } from "lucide-react";
+import {
+  Check,
+  Code,
+  ImageIcon,
+  MessageSquare,
+  Music,
+  VideoIcon,
+  Zap,
+} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useProModal } from "@/hooks/use-pro-modal";
 import { Badge } from "@/components/ui/badge";
-import { tools } from "@/app/(dashboard)/(routes)/dashboard/page";
 import axios from "axios";
 import toast from "react-hot-toast";
+
+export const tools = [
+  {
+    label: "Conversation",
+    icon: MessageSquare,
+    href: "/conversation",
+    color: "text-violet-500",
+    bgColor: "bg-violet-500/10",
+  },
+  {
+    label: "Image Generation",
+    icon: ImageIcon,
+    color: "text-pink-700",
+    bgColor: "bg-pink-700/10",
+    href: "/image",
+  },
+  {
+    label: "Video Generation",
+    icon: VideoIcon,
+    color: "text-orange-700",
+    bgColor: "bg-orange-700/10",
+    href: "/video",
+  },
+  {
+    label: "Music Generation",
+    icon: Music,
+    href: "/music",
+    color: "text-emerald-500",
+    bgColor: "bg-emerald-500/10",
+  },
+  {
+    label: "Code Generation",
+    icon: Code,
+    color: "text-green-700",
+    bgColor: "bg-green-700/10",
+    href: "/code",
+  },
+];
 
 const ProModal = () => {
   const proModal = useProModal();
